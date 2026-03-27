@@ -38,12 +38,12 @@ export interface Job {
 }
 
 export const MOCK_JOBS: Job[] = [
-  { id: 'j1', name: 'DB Backup', expression: '0 2 * * *', color: '#06b6d4', command: '/usr/local/bin/backup-db.sh' },
-  { id: 'j2', name: 'Log Rotation', expression: '0 0 * * *', color: '#10b981', command: '/usr/local/bin/rotate-logs.sh' },
+  { id: 'j1', name: 'DB Backup', expression: '0 2 * * *', color: '#10b981', command: '/usr/local/bin/backup-db.sh' },
+  { id: 'j2', name: 'Log Rotation', expression: '0 0 * * *', color: '#34d399', command: '/usr/local/bin/rotate-logs.sh' },
   { id: 'j3', name: 'Health Check', expression: '*/5 * * * *', color: '#f59e0b', command: 'curl -f https://api.example.com/health' },
   { id: 'j4', name: 'Report Gen', expression: '0 9 * * 1-5', color: '#ef4444', command: '/opt/scripts/generate-report.py' },
   { id: 'j5', name: 'Cache Warm', expression: '*/15 * * * *', color: '#8b5cf6', command: '/usr/local/bin/warm-cache.sh' },
-  { id: 'j6', name: 'Email Digest', expression: '0 8 * * 1', color: '#ec4899', command: '/opt/scripts/send-digest.py' },
+  { id: 'j6', name: 'Email Digest', expression: '0 8 * * 1', color: '#6366f1', command: '/opt/scripts/send-digest.py' },
 ];
 
 export const MOCK_EXECUTIONS: Execution[] = [

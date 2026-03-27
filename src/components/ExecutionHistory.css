@@ -19,7 +19,7 @@
 
 .history-table-wrap {
   overflow-x: auto;
-  background: var(--bg-surface);
+  background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
 }
@@ -31,6 +31,7 @@
 .history-table th.sortable {
   cursor: pointer;
   user-select: none;
+  transition: color var(--transition);
 }
 
 .history-table th.sortable:hover {
@@ -39,18 +40,20 @@
 
 .cell-name {
   font-weight: 500;
-  color: var(--text-heading);
+  color: var(--text-primary);
 }
 
 .cell-time {
   font-family: var(--mono);
   font-size: 0.8125rem;
   white-space: nowrap;
+  color: var(--text-secondary);
 }
 
 .cell-mono {
   font-family: var(--mono);
   font-size: 0.875rem;
+  color: var(--text-secondary);
 }
 
 .history-footer {

@@ -16,9 +16,11 @@
 
 .alerts-empty {
   text-align: center;
-  padding: 40px;
+  padding: 48px;
   color: var(--text-muted);
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
+  border: 1px dashed var(--border-light);
+  background: var(--bg-secondary);
 }
 
 .alerts-list {
@@ -50,7 +52,7 @@
 }
 
 .alert-resolved {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .alert-card-header {
@@ -70,7 +72,7 @@
 
 .alert-job-name {
   font-weight: 600;
-  color: var(--text-heading);
+  color: var(--text-primary);
 }
 
 .alert-expr {
@@ -84,25 +86,26 @@
 }
 
 .alert-message {
-  color: var(--text);
+  color: var(--text-secondary);
   font-size: 0.9375rem;
   line-height: 1.5;
   margin-bottom: 8px;
 }
 
 .alert-output {
-  background: var(--bg-elevated);
+  background: var(--bg-tertiary);
   padding: 10px 12px;
   border-radius: var(--radius);
   margin-bottom: 12px;
   overflow-x: auto;
+  border: 1px solid var(--border);
 }
 
 .alert-output code {
   font-size: 0.8125rem;
   background: transparent;
   padding: 0;
-  color: var(--text);
+  color: var(--text-secondary);
   white-space: pre-wrap;
   word-break: break-word;
 }
