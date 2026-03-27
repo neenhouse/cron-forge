@@ -1,0 +1,125 @@
+.alerts-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.alerts-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.alerts-count {
+  font-size: 0.8125rem;
+}
+
+.alerts-empty {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-muted);
+  font-size: 1.125rem;
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resolved-heading {
+  margin-top: 16px;
+  color: var(--text-muted);
+}
+
+/* Alert card */
+.alert-card {
+  border-left: 4px solid var(--border);
+}
+
+.alert-border-critical {
+  border-left-color: var(--danger);
+}
+
+.alert-border-warning {
+  border-left-color: var(--warning);
+}
+
+.alert-border-info {
+  border-left-color: var(--info);
+}
+
+.alert-resolved {
+  opacity: 0.6;
+}
+
+.alert-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.alert-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alert-job-name {
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.alert-expr {
+  font-size: 0.75rem;
+}
+
+.alert-time {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.alert-message {
+  color: var(--text);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.alert-output {
+  background: var(--bg-elevated);
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  overflow-x: auto;
+}
+
+.alert-output code {
+  font-size: 0.8125rem;
+  background: transparent;
+  padding: 0;
+  color: var(--text);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.alert-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert-exit {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.alert-actions {
+  display: flex;
+  gap: 8px;
+}

@@ -1,0 +1,142 @@
+.export-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.export-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.export-format-toggle {
+  display: flex;
+  gap: 4px;
+}
+
+/* Current expression info */
+.export-current {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.export-expr {
+  font-size: 1.25rem;
+  padding: 6px 16px;
+}
+
+.export-desc {
+  color: var(--text);
+}
+
+/* Output section */
+.export-output-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.export-output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.export-output-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.export-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.export-output {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  overflow-x: auto;
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 0;
+}
+
+.export-output code {
+  font-size: 0.8125rem;
+  background: transparent;
+  padding: 0;
+  color: var(--text);
+  white-space: pre;
+  line-height: 1.6;
+}
+
+/* Jobs list */
+.export-jobs h3 {
+  margin-bottom: 12px;
+}
+
+.export-jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.export-job-row {
+  display: grid;
+  grid-template-columns: 120px auto 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+}
+
+.export-job-row:last-child {
+  border-bottom: none;
+}
+
+.export-job-name {
+  font-weight: 500;
+  color: var(--text-heading);
+}
+
+.export-job-cmd {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .export-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .export-current {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .export-output-header {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .export-job-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
