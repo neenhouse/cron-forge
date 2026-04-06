@@ -74,6 +74,7 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard">
+      <a href="#dashboard-main" className="skip-to-content">Skip to content</a>
       <header className="dashboard-header">
         <div className="dashboard-brand" onClick={() => navigate('/')} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter') navigate('/'); }}>
           <svg className="brand-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -97,7 +98,7 @@ export default function Dashboard() {
           ))}
         </nav>
       </header>
-      <main className="dashboard-content">
+      <main className="dashboard-content" id="dashboard-main">
         {activeTab === 'builder' && (
           <CronBuilder fields={cronFields} onChange={setCronFields} />
         )}

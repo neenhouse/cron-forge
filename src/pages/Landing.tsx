@@ -75,6 +75,7 @@ export default function Landing() {
 
   return (
     <div className="landing">
+      <a href="#main-content" className="skip-to-content">Skip to content</a>
       {/* Navigation */}
       <nav className="landing-nav">
         <div className="landing-nav-inner">
@@ -92,6 +93,7 @@ export default function Landing() {
       </nav>
 
       {/* Hero */}
+      <main id="main-content">
       <header className="landing-hero">
         <div className="landing-hero-badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -178,6 +180,7 @@ export default function Landing() {
         </button>
       </section>
 
+      </main>
       {/* Footer */}
       <footer className="landing-footer">
         <div className="footer-brand">
