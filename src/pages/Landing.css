@@ -9,12 +9,14 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 10, 15, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(10, 10, 15, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
+  border-top: 2px solid var(--accent);
   margin: 0 -24px;
   padding: 0 24px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(16, 185, 129, 0.1);
 }
 
 .landing-nav-inner {
@@ -67,16 +69,22 @@
 
 .landing-hero-title {
   font-size: 3.75rem;
-  line-height: 1.08;
+  line-height: 1.06;
   letter-spacing: -0.04em;
   font-weight: 700;
   margin-bottom: 24px;
+  font-family: var(--display);
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
 }
 
 .accent-text {
-  color: var(--accent);
   font-family: var(--mono);
   font-weight: 700;
+  background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #6ee7b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 24px rgba(16, 185, 129, 0.35));
 }
 
 .landing-hero-subtitle {
@@ -167,12 +175,19 @@
 .feature-card {
   text-align: left;
   cursor: default;
+  transition: border-color var(--transition-slow), transform var(--transition-slow), box-shadow var(--transition-slow), background var(--transition-slow);
 }
 
 .feature-card:hover {
-  border-color: var(--accent-border);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow), var(--shadow-glow);
+  border-color: rgba(16, 185, 129, 0.45);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg), 0 0 32px rgba(16, 185, 129, 0.12);
+  background: rgba(17, 17, 24, 0.95);
+}
+
+.feature-card:hover .feature-icon {
+  background: rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.25);
 }
 
 .feature-icon {
@@ -185,6 +200,8 @@
   background: var(--accent-muted);
   color: var(--accent);
   margin-bottom: 16px;
+  transition: background var(--transition-slow), box-shadow var(--transition-slow);
+  border: 1px solid var(--accent-border);
 }
 
 .feature-card h3 {
@@ -215,7 +232,18 @@
 
 .step-card {
   text-align: left;
-  padding: 24px;
+  padding: 28px 24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--accent-border);
+  transition: border-color var(--transition-slow), box-shadow var(--transition-slow), transform var(--transition-slow);
+}
+
+.step-card:hover {
+  border-left-color: var(--accent);
+  box-shadow: var(--shadow), -4px 0 16px rgba(16, 185, 129, 0.1);
+  transform: translateY(-2px);
 }
 
 .step-number {
@@ -225,12 +253,14 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--accent);
-  color: #fff;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  color: #022c1a;
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 1rem;
+  font-family: var(--mono);
   margin-bottom: 16px;
-  box-shadow: 0 0 16px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(110, 231, 183, 0.3);
 }
 
 .step-card h3 {
@@ -248,22 +278,23 @@
   text-align: center;
   padding: 72px 40px;
   margin: 40px 0;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
+  background: linear-gradient(160deg, rgba(16, 185, 129, 0.06) 0%, var(--bg-secondary) 50%);
+  border: 1px solid var(--accent-border);
   border-radius: var(--radius-xl);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.05) inset, var(--shadow-lg);
 }
 
 .cta-glow {
   position: absolute;
-  top: -60%;
+  top: -40%;
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
   border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(16, 185, 129, 0.18) 0%, rgba(16, 185, 129, 0.04) 50%, transparent 70%);
   pointer-events: none;
 }
 
